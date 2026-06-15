@@ -39,6 +39,60 @@ export default function VideoGallery() {
     },
   ];
 
+  const myDriveVideos2: DriveVideo[] = [
+    {
+      id: "vid-1",
+      title: "Ultra Luxury Modern Villa Walkthrough",
+      category: "Cinematic Shoot",
+      embedUrl: "https://drive.google.com/file/d/1dcWiOuwV6VpJANQzud4v74AH9EzmXaDp/preview",
+    },
+    {
+      id: "vid-2",
+      title: "Premium 3BHK Apartment Indoor Tour",
+      category: "Property Reel",
+      embedUrl: "https://drive.google.com/file/d/1yuPEusHR6-gE-d3TkgmuZ29K7XdNQElZ/preview",
+    },
+    {
+      id: "vid-3",
+      title: "Commercial High-Rise Mega Launch",
+      category: "Ad Campaign",
+      embedUrl: "https://drive.google.com/file/d/1bW7lTjvhufJCFGcRqbFmHeuCUzj7a2vw/preview",
+    },
+    {
+      id: "vid-4",
+      title: "Elegant Minimalist Penthouse Review",
+      category: "Premium Edit",
+      embedUrl: "https://drive.google.com/file/d/1bbjDCqDTjNXQ8DlBmnjJkX_umfZ0C8OL/preview",
+    },
+  ];
+
+  const myDriveVideos3: DriveVideo[] = [
+    {
+      id: "vid-1",
+      title: "Ultra Luxury Modern Villa Walkthrough",
+      category: "Cinematic Shoot",
+      embedUrl: "https://drive.google.com/file/d/1jamfrDWSjFlqhvifLwi38kfvGNr6qx2l/preview",
+    },
+    {
+      id: "vid-2",
+      title: "Premium 3BHK Apartment Indoor Tour",
+      category: "Property Reel",
+      embedUrl: "https://drive.google.com/file/d/1Fao5GluGVeFi11jQi-MlX02KFEhC1J75/preview",
+    },
+    {
+      id: "vid-3",
+      title: "Commercial High-Rise Mega Launch",
+      category: "Ad Campaign",
+      embedUrl: "https://drive.google.com/file/d/17rvaSzqyweuS5VXYiiIsuPCHPRLCnIzD/preview",
+    },
+    {
+      id: "vid-4",
+      title: "Elegant Minimalist Penthouse Review",
+      category: "Premium Edit",
+      embedUrl: "https://drive.google.com/file/d/1VXoX8WLZ_Uf_EuS0Y9AmovOq09pq-xIv/preview",
+    },
+  ];
+
   return (
     <section id="portfolio" className="w-full bg-[#0b0b0b]  py-10 md:py-24 border-t border-white/5">
       <div className="sm:mx-[50px] px-4 sm:px-0">
@@ -60,8 +114,104 @@ export default function VideoGallery() {
           3. Medium screen (md:)  -> md:grid-cols-3 (md se lg tak 3 video)
           4. Large screen (lg:)   -> lg:grid-cols-4 (lg se upar 4 video)
         */}
+        <div className="">
+          <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+            Dream House Group
+          </p>
+          
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {myDriveVideos.map((video) => (
+            <div 
+              key={video.id} 
+              className="bg-[#111111] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-[#f5c518]/40 hover:shadow-[0_10px_30px_rgba(245,197,24,0.05)] transition-all duration-300 relative"
+            >
+              
+              {/* Aspect Ratio Box Custom Video Container */}
+              <div className="relative w-full h-[350px] aspect-video bg-black overflow-hidden border-b border-white/5">
+                <iframe
+                  src={video.embedUrl}
+                  className="w-full h-full border-0 absolute inset-0 opacity-85 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  loading="lazy"
+                  title={video.title}
+                />
+                
+                {/* Micro Floating Overlay Category Tag */}
+                <span className="absolute top-3 left-3 bg-[#0b0b0b]/90 backdrop-blur-md text-[#f5c518] text-[9px] font-bold font-oswald tracking-widest uppercase px-2 py-0.5 rounded-xs z-20 border border-white/5">
+                  {video.category}
+                </span>
+              </div>
+
+              {/* Text Description Block Below Player */}
+              <div className="p-4 flex flex-col gap-1 bg-[#121212]">
+                <h4 className="font-oswald text-sm md:text-base font-bold text-white tracking-wide group-hover:text-[#f5c518] transition-colors duration-200 line-clamp-1">
+                  {video.title}
+                </h4>
+                <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider font-sans">
+                  High-Impact Clip
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+        <div className="pt-12">
+          <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+            KK Group
+          </p>
+          
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {myDriveVideos2.map((video) => (
+            <div 
+              key={video.id} 
+              className="bg-[#111111] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-[#f5c518]/40 hover:shadow-[0_10px_30px_rgba(245,197,24,0.05)] transition-all duration-300 relative"
+            >
+              
+              {/* Aspect Ratio Box Custom Video Container */}
+              <div className="relative w-full h-[350px] aspect-video bg-black overflow-hidden border-b border-white/5">
+                <iframe
+                  src={video.embedUrl}
+                  className="w-full h-full border-0 absolute inset-0 opacity-85 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  loading="lazy"
+                  title={video.title}
+                />
+                
+                {/* Micro Floating Overlay Category Tag */}
+                <span className="absolute top-3 left-3 bg-[#0b0b0b]/90 backdrop-blur-md text-[#f5c518] text-[9px] font-bold font-oswald tracking-widest uppercase px-2 py-0.5 rounded-xs z-20 border border-white/5">
+                  {video.category}
+                </span>
+              </div>
+
+              {/* Text Description Block Below Player */}
+              <div className="p-4 flex flex-col gap-1 bg-[#121212]">
+                <h4 className="font-oswald text-sm md:text-base font-bold text-white tracking-wide group-hover:text-[#f5c518] transition-colors duration-200 line-clamp-1">
+                  {video.title}
+                </h4>
+                <p className="text-[10px] text-gray-500 font-medium uppercase tracking-wider font-sans">
+                  High-Impact Clip
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+        <div className="pt-12">
+          <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+            Dream House Group
+          </p>
+          
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {myDriveVideos3.map((video) => (
             <div 
               key={video.id} 
               className="bg-[#111111] border border-white/10 rounded-sm overflow-hidden flex flex-col justify-between group hover:border-[#f5c518]/40 hover:shadow-[0_10px_30px_rgba(245,197,24,0.05)] transition-all duration-300 relative"
