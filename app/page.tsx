@@ -6,7 +6,7 @@ import PackagesSection from "./components/packagessection";
 import Workflow from "./components/workflow";
 import CTASection from "./components/ctasections";
 import Footer from "./components/footer";
-import VideoGallery from "./components/videogallery";
+import VideoTestimonialsSection from "./components/videotestimonialssection";
 
 export default function Home() {
   return (
@@ -14,7 +14,8 @@ export default function Home() {
       <Navbar/>
       <HeroSection/>
       <CaseStudy/>
-      <VideoGallery/>
+      {/* <VideoGallery/> */}
+      <VideoTestimonialsSection/>
       <PackagesSection/>
       <Workflow/>
       <CTASection/>
