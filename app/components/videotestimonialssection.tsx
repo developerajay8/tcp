@@ -97,14 +97,14 @@ const videos3: VideoData[] = [
   },
 ];
 
-const videos4: VideoData[] = [
-  {
-    id: 14,
-    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781597035/55_lhak_villaa_final_1_xwsn2c.mp4",
-    poster: "/image copy 8.png",
-    caption: "Luxury Modern Villa Review",
-  },   
-];
+// const videos4: VideoData[] = [
+//   {
+//     id: 14,
+//     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781597035/55_lhak_villaa_final_1_xwsn2c.mp4",
+//     poster: "/image copy 8.png",
+//     caption: "Luxury Modern Villa Review",
+//   },   
+// ];
 
 function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
   const [showMenu, setShowMenu] = useState(false);
@@ -278,7 +278,7 @@ export default function VideoTestimonialsSection() {
         </div>
 
         {/* CMB Group */}
-        <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+        {/* <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
           cmb group
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
@@ -290,7 +290,7 @@ export default function VideoTestimonialsSection() {
               setActiveId={setActiveId}
             />
           ))}
-        </div>
+        </div> */}
 
         {/* Updated Button to open specific Google Drive Folder */}
         <div className="mt-16 flex justify-center">
