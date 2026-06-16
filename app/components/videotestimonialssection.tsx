@@ -67,8 +67,36 @@ const videos2: VideoData[] = [
   },
   {
     id: 8,
+    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781601923/Copy_of_jaipurdreamhouse_1749091604_3647966768440110122_4358432917_letvhf.mp4",
+    poster: "/image copy 11.png",
+    caption: "Client Growth Feedback",
+  },
+];
+
+const videos3: VideoData[] = [
+  {
+    id: 9,
+    // Apni Cloudinary video aur poster image links yahan paste karein
+    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781597035/55_lhak_villaa_final_1_xwsn2c.mp4",
+    poster: "/image copy 8.png",
+    caption: "Luxury Modern Villa Review",
+  },
+  {
+    id: 10,
+    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781600593/65_lhak_2222_1_1_viczgk.mp4",
+    poster: "/image copy 9.png",
+    caption: "Premium Apartment Tour",
+  },
+  {
+    id: 11,
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781588145/2nd_kk_reel_pewaxp.mp4",
     poster: "/image copy 7.png",
+    caption: "High-Rise Project Launch",
+  },
+  {
+    id: 12,
+    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781601365/32_lhak_vila_final_1_gnukoi.mp4",
+    poster: "/image copy 10.png",
     caption: "Client Growth Feedback",
   },
 ];
@@ -232,6 +260,23 @@ export default function VideoTestimonialsSection() {
         {/* Grid System Configured to 2 Columns Mobile -> 4 Columns Large Screen */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {videos2.map((video) => (
+            <VideoCard
+              key={video.id}
+              video={video}
+              activeId={activeId}
+              setActiveId={setActiveId}
+            />
+          ))}
+        </div>
+
+
+
+        <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+            KK group
+          </p>
+        {/* Grid System Configured to 2 Columns Mobile -> 4 Columns Large Screen */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          {videos3.map((video) => (
             <VideoCard
               key={video.id}
               video={video}
