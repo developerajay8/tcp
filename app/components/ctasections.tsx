@@ -1,6 +1,14 @@
 import React from 'react';
 
 export default function CTASection() {
+  // Aapka custom message perfectly URL encoded hai taaki line breaks aur emojis sahi se transfer hon
+  const whatsappNumber = "9983071230";
+  const presetMessage = encodeURIComponent(
+    "Hello Team TCP. Portfolio me aapke videos aur real estate shoots dekhe—outstanding work! 🔥 Mai intrested hu aapke sath kaam karne ke liye. Mere project ko onboarding karne ka next step aur process kya hai? Please details share kijiye."
+  );
+  
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${presetMessage}`;
+
   return (
     <section className="w-full bg-[#0b0b0b] py-10 md:py-24 border-t border-white/5">
       <div className="sm:mx-[50px] px-4 sm:px-0">
@@ -24,9 +32,9 @@ export default function CTASection() {
 
           {/* Dual Action Premium Buttons Layout */}
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto z-10">
-            {/* Primary Filled CTA Button */}
+            {/* Primary Filled CTA Button with Auto-Message */}
             <a 
-              href="https://wa.me/your-number" 
+              href={whatsappUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-full sm:w-auto bg-[#f5c518] hover:bg-[#e0b410] text-[#0b0b0b] font-sans text-xs font-black tracking-widest uppercase px-8 py-4 flex items-center justify-center gap-2 transition-all duration-200 shadow-lg rounded-sm"
@@ -36,7 +44,7 @@ export default function CTASection() {
 
             {/* Secondary Outlined Button */}
             <a 
-              href="mailto:tcp@gmail.com" 
+              href="mailto:thriveclipproductions@gmail.com?subject=Inquiry%20regarding%20Real%20Estate%20Video%20Production&body=Hello%20Team%20TCP%2C%20I%20saw%20your%20portfolio%20and%20interested%20in%20onboarding%20my%20project." 
               className="w-full sm:w-auto border border-white/20 bg-white/[0.02] hover:bg-white/[0.06] text-[#f5c518] hover:text-white font-sans text-xs font-bold tracking-widest uppercase px-8 py-4 text-center transition-all duration-200 rounded-sm"
             >
               SEND EMAIL

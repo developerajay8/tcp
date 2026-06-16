@@ -53,13 +53,44 @@ export default function StatsSection() {
               Arbaj Khan
             </h4>
             <p className="text-[#f5c518] text-xs font-bold tracking-wider uppercase mt-0.5 font-oswald">
-              Founder — TCP
+              Co Founder — TCP
             </p>
             <p className="text-gray-500 text-xs mt-1 tracking-wide font-light">
-              +91 XXXXX XXXXX <span className="mx-1 text-gray-700">|</span> tcp@gmail.com
+              +91 9983071230 <span className="mx-1 text-gray-700">|</span> thriveclipproductions@gmail.com
             </p>
           </div>
+
+          
         </div>
+
+
+         {/* Founder Profile Card */}
+        <div className="max-w-lg bg-[#141414] border-l-4 border-[#f5c518] p-6 flex items-center gap-5 shadow-xl rounded-r-sm">
+          {/* Avatar Icon */}
+          <div className="w-14 h-14 bg-[#f5c518] rounded-full flex items-center justify-center flex-shrink-0">
+            <span className="text-[#0b0b0b] font-oswald text-xl font-bold tracking-wider">
+              R
+            </span>
+          </div>
+          
+          {/* Details */}
+          <div className="flex flex-col">
+            <h4 className="font-oswald text-xl font-bold tracking-wide text-white leading-tight">
+              Rahman
+            </h4>
+            <p className="text-[#f5c518] text-xs font-bold tracking-wider uppercase mt-0.5 font-oswald">
+              Co Founder — TCP
+            </p>
+            <p className="text-gray-500 text-xs mt-1 tracking-wide font-light">
+              +91 9983071230 <span className="mx-1 text-gray-700">|</span> thriveclipproductions@gmail.com
+            </p>
+          </div>
+
+          
+        </div>
+
+
+       
 
       </div>
     </div>

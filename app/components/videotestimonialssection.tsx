@@ -19,7 +19,6 @@ interface VideoCardProps {
 const videos: VideoData[] = [
   {
     id: 1,
-    // Apni Cloudinary video aur poster image links yahan paste karein
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781586271/Arihantam_Vihar._final_2_fr4efn.mp4",
     poster: "/image.png",
     caption: "Luxury Modern Villa Review",
@@ -44,11 +43,9 @@ const videos: VideoData[] = [
   },
 ];
 
-
 const videos2: VideoData[] = [
   {
     id: 5,
-    // Apni Cloudinary video aur poster image links yahan paste karein
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781592102/Copy_of_Copy_of_farm_house_edit_2_1_bjjblw.mp4",
     poster: "/image copy 4.png",
     caption: "Luxury Modern Villa Review",
@@ -76,7 +73,6 @@ const videos2: VideoData[] = [
 const videos3: VideoData[] = [
   {
     id: 9,
-    // Apni Cloudinary video aur poster image links yahan paste karein
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781597035/55_lhak_villaa_final_1_xwsn2c.mp4",
     poster: "/image copy 8.png",
     caption: "Luxury Modern Villa Review",
@@ -99,6 +95,15 @@ const videos3: VideoData[] = [
     poster: "/image copy 10.png",
     caption: "Client Growth Feedback",
   },
+];
+
+const videos4: VideoData[] = [
+  {
+    id: 14,
+    src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781597035/55_lhak_villaa_final_1_xwsn2c.mp4",
+    poster: "/image copy 8.png",
+    caption: "Luxury Modern Villa Review",
+  },   
 ];
 
 function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
@@ -124,7 +129,6 @@ function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
         />
       ) : (
         <>
-          {/* Thumbnail Image Container */}
           <div className="absolute inset-0">
             <img
               src={video.poster}
@@ -132,18 +136,14 @@ function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-85 group-hover:opacity-100"
               loading="lazy"
             />
-            {/* Dark/Gold Premium Ambient Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40" />
           </div>
 
-          {/* Premium Centered Minimal Play Button */}
           <div className="absolute inset-0 flex flex-col items-center justify-between p-4 z-10">
-            {/* Top Row: Category/Caption Spacer */}
             <span className="self-start sm:block hidden bg-[#0b0b0b]/80 backdrop-blur-md text-[#f5c518] text-[9px] font-bold font-oswald tracking-widest uppercase px-2 py-0.5 rounded-xs border border-white/5">
               Client Review
             </span>
 
-            {/* Play Button Icon */}
             <div className="w-12 h-12 rounded-full bg-[#0b0b0b]/60 backdrop-blur-md border border-white/20 flex items-center justify-center group-hover:bg-[#f5c518] group-hover:border-[#f5c518] group-hover:scale-110 transition-all duration-300 shadow-lg sm:mt-0 mt-[60px]">
               <svg
                 className="w-4 h-4 text-white group-hover:text-[#0b0b0b] ml-0.5 transition-colors duration-200"
@@ -154,7 +154,6 @@ function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
               </svg>
             </div>
 
-            {/* Bottom Title Content */}
             <p className="w-full sm:block hidden font-oswald text-sm font-bold text-white tracking-wide line-clamp-1 bg-[#0b0b0b]/40 backdrop-blur-xs p-1.5 rounded-sm text-center border border-white/5">
               {video.caption}
             </p>
@@ -162,25 +161,21 @@ function VideoCard({ video, activeId, setActiveId }: VideoCardProps) {
         </>
       )}
 
-      {/* Options Trigger (Three Dots) */}
       <div className="sm:block hidden">
-
-      <div
-        className="absolute top-3 right-3 z-20 bg-black/40 p-1.5 rounded-full backdrop-blur-xs hover:bg-[#0b0b0b] transition-colors"
-        onClick={(e) => {
-          e.stopPropagation();
-          setShowMenu(!showMenu);
-        }}
-      >
-        <div className="flex gap-[3px] flex-col items-center cursor-pointer">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="w-1 h-1 rounded-full bg-white/80 group-hover:bg-[#f5c518]" />
-          ))}
+        <div
+          className="absolute top-3 right-3 z-20 bg-black/40 p-1.5 rounded-full backdrop-blur-xs hover:bg-[#0b0b0b] transition-colors"
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowMenu(!showMenu);
+          }}
+        >
+          <div className="flex gap-[3px] flex-col items-center cursor-pointer">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="w-1 h-1 rounded-full bg-white/80 group-hover:bg-[#f5c518]" />
+            ))}
+          </div>
         </div>
       </div>
-      </div>
-
-      {/* Sliding Premium Sidebar Options Menu */}
       
       {showMenu && (
         <div
@@ -224,10 +219,10 @@ export default function VideoTestimonialsSection() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section id="testimonials" className="w-full bg-[#0b0b0b]  py-10 md:py-24 border-t border-white/5">
+    <section id="testimonials" className="w-full bg-[#0b0b0b] py-10 md:py-24 border-t border-white/5">
       <div className="sm:mx-[50px] px-4 sm:px-0">
 
-        {/* Section Heading matched with TCP Theme */}
+        {/* Section Heading */}
         <div className="mb-12 md:mb-16">
           <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
             Our Production Portfolio
@@ -237,10 +232,10 @@ export default function VideoTestimonialsSection() {
           </h2>
         </div>
 
- <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
-            Saroda Group
-          </p>
-        {/* Grid System Configured to 2 Columns Mobile -> 4 Columns Large Screen */}
+        {/* Saroda Group */}
+        <p className="text-[#f5c518] text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+          Saroda Group
+        </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {videos.map((video) => (
             <VideoCard
@@ -252,12 +247,10 @@ export default function VideoTestimonialsSection() {
           ))}
         </div>
 
-
-
- <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
-            Dream house group
-          </p>
-        {/* Grid System Configured to 2 Columns Mobile -> 4 Columns Large Screen */}
+        {/* Dream House Group */}
+        <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+          Dream house group
+        </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {videos2.map((video) => (
             <VideoCard
@@ -269,12 +262,10 @@ export default function VideoTestimonialsSection() {
           ))}
         </div>
 
-
-
+        {/* KK Group */}
         <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
-            KK group
-          </p>
-        {/* Grid System Configured to 2 Columns Mobile -> 4 Columns Large Screen */}
+          KK group
+        </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {videos3.map((video) => (
             <VideoCard
@@ -284,6 +275,33 @@ export default function VideoTestimonialsSection() {
               setActiveId={setActiveId}
             />
           ))}
+        </div>
+
+        {/* CMB Group */}
+        <p className="text-[#f5c518] pt-12 text-xs md:text-sm font-bold tracking-[0.25em] uppercase mb-3 font-oswald">
+          cmb group
+        </p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+          {videos4.map((video) => (
+            <VideoCard
+              key={video.id}
+              video={video}
+              activeId={activeId}
+              setActiveId={setActiveId}
+            />
+          ))}
+        </div>
+
+        {/* Updated Button to open specific Google Drive Folder */}
+        <div className="mt-16 flex justify-center">
+          <a
+            href="https://drive.google.com/drive/folders/1mgYiGdLmwXSdRzR35hJxCC4ROs3deKjP"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex justify-center items-center bg-transparent hover:bg-[#f5c518] text-[#f5c518] hover:text-[#0b0b0b] border border-[#f5c518] font-sans text-xs font-black tracking-widest uppercase px-10 py-5 transition-all duration-300 rounded-sm shadow-xl hover:shadow-[0_0_30px_rgba(245,197,24,0.2)] text-center cursor-pointer"
+          >
+            View Full Drive Archive 📂
+          </a>
         </div>
 
       </div>
