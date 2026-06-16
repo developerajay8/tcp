@@ -47,26 +47,26 @@ const videos: VideoData[] = [
 
 const videos2: VideoData[] = [
   {
-    id: 1,
+    id: 5,
     // Apni Cloudinary video aur poster image links yahan paste karein
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781592102/Copy_of_Copy_of_farm_house_edit_2_1_bjjblw.mp4",
     poster: "/image copy 4.png",
     caption: "Luxury Modern Villa Review",
   },
   {
-    id: 2,
+    id: 6,
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781589067/home_3_final_e4ilzv.mp4",
     poster: "/image copy 5.png",
     caption: "Premium Apartment Tour",
   },
   {
-    id: 3,
+    id: 7,
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781588530/jaipurdreamhousegroup_1761384848_3751090206603978769_75427125315_kusyzc.mp4",
     poster: "/image copy 6.png",
     caption: "High-Rise Project Launch",
   },
   {
-    id: 4,
+    id: 8,
     src: "https://res.cloudinary.com/dubmk66ps/video/upload/v1781588145/2nd_kk_reel_pewaxp.mp4",
     poster: "/image copy 7.png",
     caption: "Client Growth Feedback",
