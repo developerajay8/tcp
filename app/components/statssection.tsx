@@ -67,11 +67,14 @@ export default function StatsSection() {
          {/* Founder Profile Card */}
         <div className="max-w-lg bg-[#141414] border-l-4 border-[#f5c518] p-6 flex items-center gap-5 shadow-xl rounded-r-sm">
           {/* Avatar Icon */}
-          <div className="w-14 h-14 bg-[#f5c518] rounded-full flex items-center justify-center flex-shrink-0">
-            <span className="text-[#0b0b0b] font-oswald text-xl font-bold tracking-wider">
-              R
-            </span>
-          </div>
+         <div className="w-14 h-14 rounded-full overflow-hidden flex items-center justify-center flex-shrink-0 border border-white/10">
+  <img 
+    src="/rehman.png" 
+    alt="Profile" 
+    className="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>
           
           {/* Details */}
           <div className="flex flex-col">
